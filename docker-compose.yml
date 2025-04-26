@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  tweedle-dee:
+    read_only: true
+    image: anssi/fcsc2023-web-tweedle-dee:latest
+
+  nginx:
+    image: anssi/fcsc2023-web-tweedle-dee-nginx:latest
+    ports:
+      -  ${PORT}:8000
